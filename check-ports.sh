@@ -1,6 +1,6 @@
 #!/bin/bash
 
-check_port() {
+check-port() {
   local port=$1
   local host=${2:-"localhost"}
 
@@ -16,6 +16,6 @@ ports=(80 443 22 53)
 
 # Check each port in the list
 for port in "${ports[@]}"; do
-  check_port "$port"
+  check-port "$port"
 done
 ```
