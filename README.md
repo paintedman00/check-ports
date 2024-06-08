@@ -99,18 +99,5 @@ Port 53 is open on localhost!
         ```bash
         brew install netcat
         ```
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request if you have any improvements or additional features to share.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Author
-
-[paintedman00](https://github.com/paintedman00)
-
-Feel free to reach out if you have any questions or suggestions!
+ns or suggestions!
 
