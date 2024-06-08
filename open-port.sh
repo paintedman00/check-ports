@@ -1,27 +1,21 @@
 #!/bin/bash
 
-function checkPort() {
+check_port() {
   local port=$1
-  local host="localhost"
+  local host=${2:-"localhost"}
 
-  if [ -n "$2" ]; then
-    host=$2
-  fi
-
-  nc -z $host $port
-  status=$?
-
-  if [ $status -eq 0 ]; then
-    echo "Port $port is open!"
+  if nc -z "$host" "$port"; then
+    echo "Port $port is open on $host!"
   else
-    echo "Port $port is closed!"
+    echo "Port $port is closed on $host!"
   fi
 }
 
-# list of ports
+# List of ports to check
 ports=(80 443 22 53)
 
-# Check each port in the list.
+# Check each port in the list
 for port in "${ports[@]}"; do
-  checkPort $port
+  check_port "$port"
 done
+```
